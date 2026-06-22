@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        body{
+            width: 100%;
+            top: 0;
+            background-color: rgb(80, 78, 78);
+        }
+
+        header{
+          display:flex;
+          justify-content:center;
+          gap:30px;
+        }
+
+        .logo{
+            color: pink;
+            font-size: 2rem;
+            width: 100%;
+            padding: 10px;
+            background: black;
+        }
+
+        .box{
+           width:240px;
+           background:rgb(173, 136, 136);
+           border-radius:20px;
+           overflow:hidden;
+           box-shadow:0 5px 15px rgba(0,0,0,0.2);
+           transition:0.3s;
+           text-align:center;
+           padding:18px;
+
+        }
+
+        .box img{
+            border-radius: 15px;
+        }
+
+        .box h1{
+            color: rgb(226, 105, 105);
+            font-size: 2rem;
+        }
+
+        .detail{
+            color: rgb(224, 138, 138);
+            margin-top: 10px;
+            font-size: 1.5rem;
+
+        }
+
+        .price{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: red;
+            font-size: 1.5rem;
+            font-weight: blod;
+            margin-top: 10px;
+        }
+
+        button{
+            color: black;
+            padding: 5px;
+            border: 20px;
+            outline: 2px solid rgb(126, 126, 150);
+            border-radius: 12px;
+            align-items: center;
+            margin-left: 40px;
+            margin-top: 10px;
+            width: 100px;
+        }
+
+       
+        button a{
+            color: rgb(20, 19, 19);
+            font-size: 1rem;
+        }
+
+         button:hover{
+            background: red;
+        }
+
+        .h2{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .box{
+           width:240px;
+           background:rgb(255, 249, 249);
+           border-radius:20px;
+           box-shadow:0 5px 15px rgba(0,0,0,0.2);
+           transition:0.3s;
+           text-align:center;
+           padding:18px; 
+        }
+
+      .box:hover{
+       transform:translateY(-10px);
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      padding: 8;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .search-container input {
+      border: none;
+      outline: none;
+      padding: 12px 15px;
+      width: 210px;
+      border-radius: 30px;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      border: none;
+      background: #c7ccd1;
+      color: white;
+      padding: 8px;
+      border-radius: 12px;
+      font-size: 1rem;
+      margin-left: 20px;
+    }
+
+    .search-container button:hover {
+      background: #0056b3;
+    }
+
+
+    .contect{
+        display: flex;
+        justify-content: space-around;
+        padding: 5px; 
+        background: rgb(90, 88, 88);
+        border-radius: 12px;
+    }
+
+    .list{
+        margin-right: 300px;
+        list-style-type: none;
+        display: flex;
+        gap: 40px;
+        padding: 8px;
+        font-size: 20px;
+        border-radius: 12px;
+        transition:0.3s;
+        
+    }
+
+    li a{
+        color: #0a0a0a;
+        transition: 0.3;
+         transition:0.3s;
+    }
+
+    a:hover{
+        color: #ff4d6d;
+    }
+
+
+
+
+.footer-box h3{
+    color:#ff4d6d;
+    /* margin-bottom:15px; */
+}
+
+.footer-box a{
+    display:block;
+    color:#ccc;
+    margin:8px 0;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-box a:hover{
+    color:#ff4d6d;
+
+}
+
+.social-icons{
+    margin:10px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i{
+    font-size:22px;
+    margin-right:15px;
+    color:white;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.social-icons i:hover{
+    color:#ff4d6d;
+}
+
+.ma{
+    color: #131212;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left:50px;
+    font-size: 12px;
+
+}
+
+@media(max-width:768px){
+
+    .logo{
+        font-size:1.5rem;
+        padding:15px 20px;
+    }
+
+    .box{
+        width:100%;
+    }
+
+}
+
+.no{
+    font-size: 1.2rem;
+    color: blue;
+    margin-left: 50px;
+     transition:0.3s;
+}
+
+.no:hover{
+    color: #ff4d6d;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        phone shop
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    <div class="head">
+    <div class="search-container">
+      <input type="text" placeholder="Find your fav phone...">
+     <button>Search</button>
+  </div> <br>
+
+  </div>
+
+  <header>
+        <div class="box">
+            <h1>Iphone 16</h1>
+            <img src="https://th.bing.com/th/id/OIP.wsgs8g0IM1E3P-MUALdN8wHaHa?w=178&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+            <p class="detail">
+                iphone 16 color blue
+            </p>
+            <p class="price">
+                800$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+
+        <div class="box">
+            <h1>xaiomi 14 Ultra</h1>
+            <img src="data:image/webp;base64,UklGRvIJAABXRUJQVlA4IOYJAACQNQCdASqiALQAPp1EnUwloyYlIrF98MATiWluJh7du/cst7QZTtYSfMnrlfd/XEVjKUfhh3WKP7WZrwPdkuffX3Dlu/FB8q6aH/Y8mD630ef2AMqw6lIli/idF3K1Omsp6lsS1HYtzyM3IaVIUI7x7T5wxSL5//e8yRh0PvFWKb5wmXO2BezA9LD9+yW39Rjx7aK0AyE6rVs3wDCiPtHoGfOH7a8G5wY+0vuwTr5s3QXAFdlM5Mut5rTQwEbCSG7S/Bww+7zLKa5h5a4/AO4WIpTzCqz/qCZudPUCztE3o0+zhXJ0MkX8InLppZcuXKNehO3PUGE0fXldLxolu+NBJ582yfpfur2u4lA++QKhyPvAUWiQ/QrnyDbnSn3L7YwAQDd4haTUsMJPg8Ehz8V8gZC3FfSyualiCk/FvzyQWaELLJB4m6ePnM0ZwWnRoS2ma9nqjPV9sPHZZesmCcv86kytee5oOD9/mddO3EWF1N3/KwAQUvNPbBsZfTNX/jQD/0sTFChQrOxjqG1Az3NZhRPWI+7PtaCPKtroXuBLimlTawvtF7vHUMi+LuLbCvWNmU41QAD+/b2nTY62x1KzpJmJTaBU1EqSoFjOzbn/S9RyE4A5UmVqvGW+bNHa9tGC81X5Bo+MeIUJizv2YDSWncNpS8vRx1QITHgWVEOqu9NV9ciz4EFopdr7jTeDEeDN7BulC8J9vrQngfmj850Nv/u5tPgzur3ArSkn836CIRC0bVGsM+Q+YWGq0jm/P8R8Ga+U71Ec/MKiZZSB6Uj7dN7WZeVyM3HHC/3yQddaGPmBHmbBO7qfz+3721edoLzUldYfWy9X9do/W7yXLomSVYdi8S+Zlxf+9A+ts2rl0LVVrR/RR6k4dmoZ9pkLSlvJBTte9H/J9dy1trqLGw17gV8hkfIDnFHHACREOWjlb+BxMtv6v8tVgNLbvgxqCg2fEseizWkoIZ9pvl6Y982VpiQfW7XFqvFFYBZWPsGo7UKkK8eksLFldaAgKGfQJPBoDSotan9c7xGcHM1kuY/1fyCj+C8i8WeXPo746WL228fapDwoasd8/tkP8XTUCphbA7pYCnRpdk5wAsbJd6By2n0F5PFEiUT3+hbErTW/hlXhIFEMnosjrTcJK9mMuOSFPHdjEouDFUbpaIzDFIk8MZhUiAM1IzoVz/qt7EjfW67I5TVGTihggCULez//o9qUo/4wn1fkRNxogouHgOxa+dfRDt8GO3lH58ChcIXbO+MkQMm4WlFrd6n7Q5Q9tsb4NR7XiXphm6drPLpft2sfS6no25cxR9yB5/jaYMf3V16L/83mfGNHSi2YV7XhD0dT2YceUlbi3CFYHVuiT8T9kzgemP2FcK9084o/NCCBgjfA3OOKAHo5/3+oB7+HGPv7d7SWrCykNYwlDhlLUhQoLsGilkjtSBDwWer76ROK63gluUuT8kxu2wMp8os/UUKa58JZMTfG5Jxv4r0G70bEf1iyHe5snBCILM0PCZ3Q45evneNkPzOZ4U+gvjlPhySoWhWWRrQDJEmofUHJG21CJboT4FCF7wWvOGmlXI+iKXFa9hqAaxVGfJNAQLUgvpwMHXBaKeZW5VM/w5DbwmoZungF9ixLoa5qTGhYfpVL2J+DbmF58qtYFBjKeoPbxUAnuJN6BNSsPgtRUiGCbgMgDHkUpvwtXz21HjDHEWy+Hgea6KGYz/MCtAiGKPqihILrzV8MbZoM/O4S8gxW/FUqTlOPdXCCPaMmKurPI1WauVxu+OO6MtYzMypWlUgnEjYskJrLYEIAGo98q+U8bibtmjkau64cIe6vohSDiSr8BRaTYEYTRmE8SIaT1NhuMIW/Yav4a+gS6yvRQW1ygca306ToVA8B4Iz1kif25JoYdsBEMP5rC3sCxRuMTHoUxsTYhv7skDtKQ40RkXG+bs3nhkhl/9bxLnfF4zITtC25j2vfKyw5WYXx9ITha9yGvd4tq4Tp6DsmJYsDGglP4Y3vtgcEuB+OdnquAtKRbVblN1I0TepswMQ/UOQ3icg/dLElYlhQMOuMMxqHVem+8XGG5nkAT5sRrNkeupAsZucvBb7UE2JEpq2vi/W1ZcMsLDknlUUs6ldgXFEakpZ9KDmvoVqm4Iz6G3dWNMb2td9IHCqC4IMK4YjKat9seRIi901gArIYqgnrIIzlp+6TDGTFSB6sApW+lvOwm6/Jtesdj2aS2MVXLCAlv5vXVGFhwOlTSkIMo0VbM1/jnoq615VdECONoZ3f6fZmlwKf8OYnYpQErIS2xPzDxRRfClen2L70AGXUUamhGxtxUvi99R1QLttKqArTJMH6qlKQX6lqqHGbN9fir/9hnGDIhuvBV8U0c90fokS6wsiPsqVuCpDGAsnyspKPIVvCrG4vKbkDW/KTn+/5Z3b1p+VCnbutUWOLMj5sKVfcJkmEMuAb0QfS7eUMP+UpJ+wIxyF3oQDSGXtxacGRGCtE6ZbmPVv6G3Krle6YXGOLHG7TrHfJoUU5O76QgvH/6evnRXprM8D1u5DKt2zZPrrJL78t7ddsbtiqqjrB0alKgxypQ0Hf7OID7dtq6m9O8AYUZTPyZ1FgXeSf4EwEAemaIWSjQ/RdWF1B0XB2RlLpjvJHBRDf0ZB3m4oaVEogOJrBzOGojfYmHAMYUux1W5zj3iPekvTGUmoA5gpcr1jP/PFhdI2WHuKBVyxE0UT7eE95AQvPochHcC5cWCg9b8w2lRWuftJ50WeoqPAl9Is0BZVQ8fDqiH0TbfJNFzDhLoBX0rXE7NWM4gsgjOvkDHcc8PBYsBb9qEcWRIE/VDdrsMF5F5AACeDfZ7a9GhqWXEueiU1JHW1qngFScgKAnORgnkvNuBKljGuDHBQvCrlDd0//ktDhcvYbCLYmeer6h4X0LFC3JhMQb2TaYnucabYfFoa5My8JKWarwl+xNpmglgKi0maoBJsFgIrxYgzaqK/R4oZsS3irZW2fYmsdnLqZRWppp9KEJo3TQ5Iaf7qengJuo517CsC6MNlJSnZv4IUVbAtQ+QHGXIiBL6uoeteX+f0Hx7KcNTGGGIrsE/ePTTTtI+RSB2GMuXlruKH0xh2oXhtPk9fXlM0bhXiTCgKOOUBht8DAJ0eykyoOh4x/oCIDl3PjlYfRwHJAqOSyN3bd2Ta7qYF0OZV1SLmjFpGwVt8WznY2C9RmA+J1rZgDVdxsFZW8NDpYm5shJyYGEikv3jpChqjYxswth1LOobJoFRJqkaKNtZmlFhrazh0LXqTD+oVlo2aPns8IicmzCgwibamrVaeqiSW/Y+yHiv5mxQBBCGqDQpRlfl2k3ZKmzdObXTHz674KGj8uiyDvWcWYoXBiY4cyy5BQAAAAAA==" alt="">
+            <p class="detail">
+              xaiomi14ultra 256G Snaptragon 8gen 3
+            </p>
+            <p class="price">
+                399$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+
+        <div class="box">
+            <h1>samsung s26 ultra</h1>
+            <img src="https://th.bing.com/th/id/OIP.lBql_iyohGowzqdxA5d4BAHaGE?w=222&h=182&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+            <p class="detail">
+                samsung S26 ultra Snapdragon 8 Elite Gen5 16GB RAM 1TB storage  a5000 mAh 
+            </p>
+            <p class="price">
+                1089$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+         <div class="box">
+            <h1>vivo x300 ultra</h1>
+            <img src="https://th.bing.com/th/id/OIP.mCFPppKw20k8p7Mw1qo3lgHaHa?w=173&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+            <p class="detail">
+               vivo x300 ultra Snapdragon 8 Elite Gen5 1TB storage 16GB RAM
+            </p>
+            <p class="price">
+                899$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+         <div class="box">
+            <h1>oppo find x9</h1>
+            <img src="data:image/webp;base64,UklGRs4DAABXRUJQVlA4IMIDAADQGwCdASq6ALoAPp1KoE0lpCMioZbZ6LATiWlu4MAB1qrLKmDdOG7yUeVluDe3+gt+xgvklufbuCaWMJoSKyUOEBS2LoJ7t23U2J74W/4SM2M8tPVI43NnErAFWiU9aU014sCFOtxxfIQseqWr/0wsvucQ88i0WFLyZT5o0iRu8LDBT8+U3gpIy9WMI46afxAJX7AyEXRSQSTkM1H4KIx3G2QSTkNSad2a0SgHjp+KIcDjiRByAwVKDyPL3g3WANErXD7c9TmIMIxxIg5DMEn+DFMfbzZbw1/JYqWKG/sxPFtYhrqkG+AA/qS4Bl0UDyy9FzKH2d+xi5QM0XPzcQnfoYnkuGslQUxiKduCJG5fQ6vztWcPQ9nmAKTfDwS6pdCz88mQ1h+B8p4hM5tCDQd5AK3fANBuPg2G00XGc7pTOdyO6Tv/uc1E5pKDdJm7r1EPrkb+B2ElqsW1Q8barEwVmbiDBY/2vPpFjR7vi8CvrkxmhlBQ6EQ9wrFqeVRQC/TATWwLJBu0zWAWn6KIRG+NQ2ZUTD7fB+2wIWXL8dc72QnoMFIpTm6vHk1gq1KGv6sftpi2gWAc6mbBx9ODrsPZ727SIZdGFvuvFziROHfScv7xUr+TPFE93B36eIGrozWVAX+AGi7vBDkpmbU7Lg3OuUn/i05wjv12u2B11U5zcs2zh1DyuYDYxyhycSHoqU2dwxKFBRYCBXqZeoVL7Cd5l7yBOY0PsN+DamdmU5RNO0SzVxGNSJBp1o195osQ1oFfwtj/AOdr4C4Efc5nWrho355sWq/p2cm+nYWpytBDGFmDZ0PS5XNzgeqwQ1P1V+A1RhljrvJajOk5nUHZ0YpoE6MCSGx3M4WrSSJU/pASjtuv5ymWb1QzmLARKusc7enCxTUTZzwRB0swwKHL/yN0J1iTR9spQE8bbfCUnPHUYdCrl+4K5wELACU18Iyzwwd1ieGwJnCYSTdEjhIzD1d/DxxwKfKJukSTm0uY307TY9vbOxwhLLYkEWXB2ZnhZLnkY6XSSCzjjspdAJvVulGd69SfS+Y+XUBmDx8Utxzk5nRdPKr/W+GVYWYyDc4UPsO3vz+NrNG8lwEhIr8JAACxbdB1UAKXHJ7AaxBhgXpNSFtIpF43IyxOavkVLhF6oMye//kUCltpZwt9RJ6nCGZJ8BVBCIlC2zHwrHdb73NPE3Y9oFwCuC414VCIzZxMw/5nxWb8QMNTlaDTX/gsfitPCLcJJ8EOlXL4t4J2UWdxlzZgPbsd1fYz+dw5hC4AAAAAAA==" alt="">
+            <p class="detail">
+                oppo find x9 dimensity 9500 1TB storage 16GB RAM
+            </p>
+            <p class="price">
+                922.45$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+         <div class="box">
+            <h1>Redmagic 11pro plus</h1>
+            <img src="https://th.bing.com/th/id/OIP.gTDVfDv0WzRsg_QiJyZYiAHaHa?w=187&h=187&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+            <p class="detail">
+                Redmagic 11pro plus Snapdragon 8 Elite Gen 5 1TB storage 24GB RAM
+            </p>
+            <p class="price">
+                1090$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+  </header><br>
+
+  <div class="h2">
+      <div class="box">
+            <h1>Vivo iqoo12</h1>
+            <img src="https://th.bing.com/th/id/OIP.xiaS2nCA_MAwpKvuBHHfAwHaHa?w=187&h=187&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+            <p class="detail">
+                iqoo 12 Snapdragon 8 Gen 3 1TB storage 16GB RAM 5000mAh
+            </p>
+            <p class="price">
+                709.99$
+            </p>
+            <button><a href="">Ordernow</a></button>
+      </div>
+
+         <div class="box">
+            <h1>Asus Rog phone 9pro</h1>
+            <img src="data:image/webp;base64,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" alt="">
+            <p class="detail">
+               rog Phone 9pro 256GB 16GB RAM Snapdragon 8 Elite 
+            </p>
+            <p class="price">
+                639$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+         <div class="box">
+            <h1>oneplus 15</h1>
+            <img src="https://th.bing.com/th/id/OIP.1QC7lgaaukLgY4cFtH6qNQHaEK?w=322&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+            <p class="detail">
+                oneplus 15 1GB 16GB RAM Snapdragon 8 Elite Gen 5
+            </p>
+            <p class="price">
+                549$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+        
+         <div class="box">
+            <h1>xaiomi 17 pro max</h1>
+            <img src="data:image/webp;base64,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" alt="">
+            <p class="detail">
+               xaiomi 17 pro max 1TGB 16GB RAM Snapdragon 8 Elite Gen 5
+            </p>
+            <p class="price">
+                939$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+
+        <div class="box">
+            <h1>iphone 17 pro max</h1>
+            <img src="https://th.bing.com/th/id/OIP.U7tNlivboHQ6dT6xxi4b4AHaE8?w=265&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+              iphone 17 pro max 1GB 12GB RAM a19 chipset
+            </p>
+            <p class="price">
+                1299$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+
+         <div class="box">
+            <h1>Oppo k13 turbo pro</h1>
+            <img src="https://thfvnext.bing.com/th/id/OIP.8bpReiUe1lk7bR-XvGW5TAHaGb?w=206&h=180&c=7&r=0&o=7&cb=thfvnextfalcon&pid=1.7&rm=3" alt="">
+              oppo k13  turbo  512GB 16GB RAM Snapdragon 8s Gen 4
+            </p>
+            <p class="price">
+                320$
+            </p>
+            <button><a href="">Ordernow</a></button>
+        </div>
+
+        </div> <br>
+        <div class="contect">
+            <div class="list">
+                <li><a href="">USD^</a></li>
+                <li><a href="">Return & AFQ</a></li>
+                <li><a href="">contect Support</a></li>
+                <li><a href="">Private Policy</a></li>
+                <li><a href="">Terms OF Service</a></li> 
+                  </div> <br>
+                
+           <div class="footer-box">
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-telegram"></i>
+
+            </div>
+            </div>
+        </div>
+
+        <div class="ma">
+            <h1> <i class="fa-brands fa-slack"></i>powered by Somhetsothearith</h1>
+        </div>
+
+        <div class="no">
+            <p>FeedBack</p>
+        </div>
+</body>
+</html>
